@@ -1,5 +1,24 @@
 <h2>Products</h2>
 
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <button (click)="share()">Share</button>
+  <app-product-alerts [product]="product" (notify)="onNotify()">
+  </app-product-alerts>
+</div>
+
+<footer>
+  <p>Nome: Felipe Santos da Silva</p>
+  <p>RA: 0050831921034</p>
+  <p>Github: <a href="https://github.com/felipe428">github.com/felipe428</a></p>
+</footer>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
