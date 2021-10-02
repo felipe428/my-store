@@ -15,7 +15,7 @@ export class ProductListComponent {
   }
 
   onNotify() {
-    window.alert('Você será notificado quando o produto for colocado a venda');
+    window.alert('Você será notificado quando o produto estiver a venda');
   }
 }
 
